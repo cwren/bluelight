@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Heavily copied from cloudiot_mqtt_example.pp
+# Heavily copied from cloudiot_mqtt_example.py
 # https://github.com/GoogleCloudPlatform/python-docs-samples/blob/master/iot/api-client/mqtt_example/cloudiot_mqtt_example.py
 
 # [START iot_mqtt_includes]
@@ -31,9 +31,6 @@ import paho.mqtt.client as mqtt
 # [END iot_mqtt_includes]
 
 # [START bluelight_includes]
-from gpiozero import LED 
-from gpiozero import Button 
-from time import sleep
 from os import system
 from signal import ITIMER_REAL
 from signal import SIGALRM
@@ -41,6 +38,10 @@ from signal import SIGTERM
 from signal import pause
 from signal import setitimer
 from signal import signal
+from time import sleep
+
+from gpiozero import LED
+from gpiozero import Button
 # [END bluelight_includes]
 
 EXPIRE_TIME = datetime.timedelta(minutes=60)
